@@ -9,7 +9,7 @@ def calculate():
      return num1 / num2
   elif Operator == "+":
     return num1 + num2
-  else:
+  elif Operator == "-":
     return num1 - num2
 
 result = calculate()
