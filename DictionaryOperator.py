@@ -1,22 +1,5 @@
-from math import *
 import operator
 import operators_
-import random
-
-print("\nBASIC: *, /, -, +\n\n")
-print("LCM: Least Common Multiple (of num1 & num2)\nGCD: Greatest Common Divisor (of num1 & num2)\n\n")
-print("RAND: RANDom (between num1 & num2)\n\n")
-print("DIVIDING:\nMOD: the rest (of num1)\"num2\n\n")
-print("POWERS:\nSQRT: squareroot (of num1)\nPOWER: (num1 to) the power (of num2)\n\n")
-print("FREQUENTION-TABLE:\nAF>RF: Absolute Frequention(num1) --> Relative Frequention\nRF>AF: Relative Frequention --> Absolute Frequention\nRF>CA: Relative Frequention --> Center Angle\nCA>RF: Center Angle --> Relative Frequention\n\n")
-
-num1 = float(input("Enter num1: "))
-print("IF IS NOT NEEDED: ENTER")
-num2 = float(input("Enter num2: "))
-print("IF IS NOT NEEDED: ENTER")
-num3 = float(input("Enter num3: "))
-
-Operator = input("Enter operator: ")
 
 Operators = {"*":operator.mul,
 "/":operator.div,
@@ -39,5 +22,34 @@ Operators = {"*":operator.mul,
 "CA>RF":operators_.CA_RF
 }
 
-debug = Operators.get(Operator, "Invalid operator!")
-print(debug(num1, num2, num3))
+while True:
+    while True:
+        print("\nBASIC: *, /, -, +\n\n")
+        print("LCM: Least Common Multiple (of num1 & num2)\nGCD: Greatest Common Divisor (of num1 & num2)\n\n")
+        print("RAND: RANDom (between num1 & num2)\n\n")
+        print("DIVIDING:\nMOD: the rest (of num1)\"num2\n\n")
+        print("POWERS:\nSQRT: squareroot (of num1)\nPOWER: (num1 to) the power (of num2)\n\n")
+        print("FREQUENTION-TABLE:\nAF>RF: Absolute Frequention(num1) --> Relative Frequention\nRF>AF: Relative Frequention --> Absolute Frequention\nRF>CA: Relative Frequention --> Center Angle\nCA>RF: Center Angle --> Relative Frequention\n\n")
+
+        num1 = float(input("Enter num1: "))
+        print("IF IS NOT NEEDED: ENTER")
+        num2 = float(input("Enter num2: "))
+        print("IF IS NOT NEEDED: ENTER")
+        num3 = float(input("Enter num3: "))
+
+        Operator = input("Enter operator: ")
+
+        debug = Operators.get(Operator, "Invalid operator!")
+
+        if not(len(num1)):
+            print("Operator not found...")
+            break
+
+        if len(num3):
+            print(debug(num1, num2, num3))
+        elif len(num2):
+            print(debug(num1, num2))
+        elif len(num1):
+            print(debug(num1))
+        else:
+            print("No value...")
