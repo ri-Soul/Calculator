@@ -29,11 +29,10 @@ def SQRT(num1, num2, num3):
     return sqrt(num1)
 
 def AF_RF(num1, num2, num3):
-    
+    return num1 * num2/num3
 def RF_AF(num1, num2, num3):
-
+    return num1/num2 * num3
 def RF_AC(num1, num2, num3):
-
-
+    return num1/num2 * 360
 def AC_RF(num1, num2, num3):
-
+    return num1 * num2/360

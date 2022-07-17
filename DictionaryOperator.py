@@ -29,7 +29,7 @@ while True:
         print("RAND: RANDom (between num1 & num2)\n\n")
         print("DIVIDING:\nMOD: the rest (of num1)\"num2\n\n")
         print("POWERS:\nSQRT: squareroot (of num1)\nPOWER: (num1 to) the power (of num2)\n\n")
-        print("FREQUENTION-TABLE:\nAF>RF: Absolute Frequention(num1) --> Relative Frequention\nRF>AF: Relative Frequention --> Absolute Frequention\nRF>CA: Relative Frequention --> Center Angle\nCA>RF: Center Angle --> Relative Frequention\n\n")
+        print("FREQUENTION-TABLE:\nAF>RF: Absolute Frequention(num1) --> Relative Frequention(num2) AF-total(num3)\nRF>AF: Relative Frequention(num1) --> Absolute Frequention(num2) AF-total(num3)\nRF>CA: Relative Frequention(num1) --> Center Angle(num2)\nCA>RF: Center Angle --> Relative Frequention\n\n")
 
         num1 = float(input("Enter num1: "))
         print("IF IS NOT NEEDED: ENTER")
