@@ -1,40 +1,30 @@
+from math import *
+import operator
+i
 num1 = float(input("Enter num1: "))
-Operator = input("Enter operator *, /, -, +, T(ool): ")
 num2 = float(input("Enter num2: "))
+print("\nBASIC: *, /, -, +\n\n")
+print("LCM: Least Common Multiple \nGCD: Greatest Common Divisor\n\n")
+print("DIVIDING:\nMOD: the rest or quotient\n\n")
+print("POWERS:\nSQRT: squareroot\nPOWER: to the power of\n\n")
+print("ABS: absolute\n\n")
+print("ROUNDING:\nROUND:above and 0.5 UP, under 0.5 DOWN\nCEIL: UP\nFLOOR: DOWN\n\n")
+print("FREQUENTION-TABLE:\nAF>RF: Absolute Frequention --> Relative Frequention\nRF>AF: Relative Frequention --> Absolute Frequention\nCA>RF: Center Angle --> Relative Frequention\nRF>CA: Relative Frequention --> Center Angle:\n\n")
 
-def calculate():
-  if Operator == "*":
-    return num1 * num2
-  elif Operator == "/":
-     return num1 / num2
-  elif Operator == "+":
-    return num1 + num2
-  elif Operator == "-":
-    return num1 - num2
-  elif Operator == "T":
-    print("LCM: Least Common Multiple\nGCD: Greatest Common Divisor\nMOD: rest\nSQRT: squareroot\nPOWER: to the power of\nABS: absolute")
-    print("ROUNDING ROUND: above and 0.5 UP, under 0.5 DOWN\nCEIL:UP\nFLOOR: DOWN")
-    print("FREQUENTION-TABLE AF>RF, RF>AF")
-    Tool = input("Enter the tool: ")
-    if Tool == "LCM":
+Operator = input("Enter operator: ")
 
-    elif Tool == "GCD":
+Operators = {"*":operator.mul(num1, num2),
+"/":operator.div(num1, num2)
+"-":operator.sub(num1, num2)
+"+":operator.add(num1, num2),
 
-    elif Tool == "MOD":
+"LCM":
+"GCD":
 
-    elif Tool == "SQRT":
+"ABS":operator.abs(), 
 
-    elif Tool == "POWER":
+}
 
-    elif Tool == "ABS":
-    
-    elif Tool == "ROUND":
-
-    elif Tool == "CEIL":
-
-    elif Tool == "FLOOR":
-
-  else:
-    return "Operator doesn't exist"
+Debug = Operators.get(Operator, "Invalid operator!")
 
 print(calculate())
